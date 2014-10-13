@@ -1,0 +1,27 @@
+## Byte-compiled
+__pycache__/
+*.py[cod]
+*.egg-info
+/dist/
+/build/
+
+## Database
+*.sqlite3
+
+## Translations
+*.mo
+
+## Media files & Collected static files
+static/
+media/
+
+## Components
+components/
+
+## Testing
+.coverage
+.noseids
+coverage.xml
+violations.txt
+nosetests.xml
+/htmlcov/*
