@@ -163,9 +163,9 @@ BOWER_INSTALLED_APPS = (
 )
 
 
-# User
+# Custom User
 
-AUTH_USER_MODEL = 'books.User'
+# AUTH_USER_MODEL = 'users.User'
 
 
 # Accounting
