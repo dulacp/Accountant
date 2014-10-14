@@ -170,5 +170,4 @@ BOWER_INSTALLED_APPS = (
 
 # Accounting
 
-DEFAULT_CURRENCY = "EUR"
-DEFAULT_TAX_PERCENTAGE = Decimal("0.20")
+from accounting.defaults import *

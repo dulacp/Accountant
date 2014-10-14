@@ -21,4 +21,5 @@ django-webtest>=1.7,<1.8
 ## Misc
 flake8>=2.2.2
 ipdb>=0.8,<0.9
+ipdbplugin>=1.4
 ipython>=1.1.0,<1.2.0
