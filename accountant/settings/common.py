@@ -72,6 +72,7 @@ WSGI_APPLICATION = 'accountant.wsgi.application'
 
 # Templates
 # https://docs.djangoproject.com/en/1.7/ref/settings/#template-context-processors
+from accounting import ACCOUNTING_MIDDLEWARE_CLASSES
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
     'django.core.context_processors.debug',
@@ -81,9 +82,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.tz',
     'django.contrib.messages.context_processors.messages',
     'django.core.context_processors.request',
-
-    'accounting.apps.context_processors.metadata',
-)
+) + ACCOUNTING_MIDDLEWARE_CLASSES
 
 # See: https://docs.djangoproject.com/en/1.7/ref/settings/#template-loaders
 TEMPLATE_LOADERS = (
