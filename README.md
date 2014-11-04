@@ -2,7 +2,7 @@
 
 > In the beginning God created man, and the costs followed afterwards.
 
-This project is a concrete application that used the [django-accounting](https://github.com/dulaccc/django-accounting) application.
+This project is a concrete integration of the [django-accounting](https://github.com/dulaccc/django-accounting) application.
 It is ready to be deployed on Heroku, but you can deploy on which provider you want.
 
 
@@ -16,6 +16,7 @@ It is ready to be deployed on Heroku, but you can deploy on which provider you w
 
 ## Usage
 
+- Create the Heroku app
 - Deploy
 - Create your organization
 - Add invoices
@@ -25,7 +26,7 @@ It is ready to be deployed on Heroku, but you can deploy on which provider you w
 
 ## Features
 
-Check out [the features](https://github.com/dulaccc/django-accounting#features) offered by [django-accounting](https://github.com/dulaccc/django-accounting).
+Maybe you want to integrate the accounting engine into your existing project, so check out [the features](https://github.com/dulaccc/django-accounting#features) offered by [django-accounting](https://github.com/dulaccc/django-accounting).
 
 
 ## Contact
