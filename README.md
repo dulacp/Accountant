@@ -31,7 +31,7 @@ Maybe you want to integrate the accounting engine into your existing project, so
 
 ## Contact
 
-[Pierre Dulac](http://github.com/dulaccc)
+[Pierre Dulac](http://github.com/dulaccc)  
 [@dulaccc](https://twitter.com/dulaccc)
 
 ## License
