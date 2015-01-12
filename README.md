@@ -5,6 +5,8 @@
 This project is a concrete integration of the [django-accounting](https://github.com/dulaccc/django-accounting) application.
 It is ready to be deployed on Heroku, but you can deploy on which provider you want.
 
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/dulaccc/Accountant)
+
 
 ## Under the hood
 
