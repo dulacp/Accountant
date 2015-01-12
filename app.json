@@ -1,0 +1,12 @@
+{
+  "name": "Accountant",
+  "description": "Accounting made accessible for small businesses and sole proprietorships through a simple Django project.",
+  "keywords": [
+    "accounting",
+    "business",
+    "money"
+  ],
+  "repository": "https://github.com/dulaccc/Accountant",
+  "addons": [],
+  "env": {}
+}
