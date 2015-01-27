@@ -1,6 +1,11 @@
 Django>=1.7.0,<1.8.0
-# django-accounting==0.1
--e git+git://github.com/dulaccc/django-accounting.git#egg=django_accounting
+
+# Database
+dj-database-url>=0.3,<0.4
+psycopg2>=2.5,<2.6
 
 # A static file production ready server
 dj-static==0.0.6
+
+# django-accounting==0.1
+-e git+git://github.com/dulaccc/django-accounting.git#egg=django_accounting
