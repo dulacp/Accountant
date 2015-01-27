@@ -21,7 +21,8 @@ DATABASES = {
 }
 
 
-if DEBUG:
-    INSTALLED_APPS += (
-        'debug_toolbar.apps.DebugToolbarConfig',
-    )
+# Debug toolbar
+
+INSTALLED_APPS += (
+    'debug_toolbar.apps.DebugToolbarConfig',
+)

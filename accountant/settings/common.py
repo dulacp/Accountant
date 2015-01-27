@@ -34,6 +34,7 @@ SECRET_KEY = 'o7k)j*lewj6va4yqz=#1^z@6wtf!$#dx(u=z!3(351rc27c9fm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+LOCAL_SERVER = True
 
 TEMPLATE_DEBUG = True
 
