@@ -27,7 +27,7 @@ DATABASES = {
 # Security
 
 ALLOWED_HOSTS = (
-    '{{ cookiecutter.repo_name }}.herokuapp.com',
+    '.herokuapp.com',  # Prefer an url with no subdomain authorized
 )
 
 
