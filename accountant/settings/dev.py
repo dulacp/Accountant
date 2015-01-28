@@ -26,3 +26,8 @@ DATABASES = {
 INSTALLED_APPS += (
     'debug_toolbar.apps.DebugToolbarConfig',
 )
+
+
+# Emailing
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

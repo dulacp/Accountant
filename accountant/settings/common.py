@@ -40,21 +40,44 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+SITE_ID = 1
+
 
 # Application definition
 
-INSTALLED_APPS = (
+DJANGO_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
 )
 
+THIRD_PARTY_APPS = (
+    'crispy_forms',
+    'avatar',  # for user avatars
+    'allauth',  # registration
+    'allauth.account',  # registration
+    'allauth.socialaccount',  # registration
+    'stronghold',  # enforce login on the whole app
+)
+
 # Accounting apps
 from accounting import get_apps
-INSTALLED_APPS = INSTALLED_APPS + get_apps()
+LOCAL_APPS = get_apps()
+
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
+
+
+# Migrations
+
+MIGRATION_MODULES = {
+    'sites': 'migrations.sites',
+    'socialaccount': 'migrations.socialaccount',
+}
+
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -64,6 +87,8 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'stronghold.middleware.LoginRequiredMiddleware',
 )
 
 ROOT_URLCONF = 'accountant.urls'
@@ -73,9 +98,13 @@ WSGI_APPLICATION = 'accountant.wsgi.application'
 
 # Templates
 # https://docs.djangoproject.com/en/1.7/ref/settings/#template-context-processors
-from accounting import ACCOUNTING_MIDDLEWARE_CLASSES
+from accounting import ACCOUNTING_TEMPLATE_CONTEXT_PROCESSORS
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
+
+    'allauth.account.context_processors.account',
+    'allauth.socialaccount.context_processors.socialaccount',
+
     'django.core.context_processors.debug',
     'django.core.context_processors.i18n',
     'django.core.context_processors.media',
@@ -83,7 +112,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.tz',
     'django.contrib.messages.context_processors.messages',
     'django.core.context_processors.request',
-) + ACCOUNTING_MIDDLEWARE_CLASSES
+) + ACCOUNTING_TEMPLATE_CONTEXT_PROCESSORS
 
 # See: https://docs.djangoproject.com/en/1.7/ref/settings/#template-loaders
 TEMPLATE_LOADERS = (
@@ -165,7 +194,36 @@ BOWER_INSTALLED_APPS = (
 
 # Custom User
 
-# AUTH_USER_MODEL = 'users.User'
+LOGIN_REDIRECT_URL = 'connect:getting-started'
+LOGIN_URL = 'account_login'
+
+
+# Authentication
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
+
+ACCOUNT_AUTHENTICATION_METHOD = 'username'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+
+
+# Stronghold
+
+STRONGHOLD_PUBLIC_URLS = (
+    r'^%s.+$' % STATIC_URL,
+    r'^%s.+$' % MEDIA_URL,
+    r'^/accounts/.*$',
+)
+STRONGHOLD_PUBLIC_NAMED_URLS = (
+)
+
+
+# Forms
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 
 # Accounting
