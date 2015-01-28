@@ -16,14 +16,51 @@ It is ready to be deployed on Heroku, but you can deploy on which provider you w
 - Already configured for an Heroku deploy
 
 
-## Usage
+## Manual deploy
 
-- Create the Heroku app
-- Deploy
-- Create your organization
-- Add invoices
-- Add bills
-- And enjoy !
+```sh
+$ heroku create --region eu accountant
+$ heroku addons:add heroku-postgresql:hobby-dev
+$ heroku config:set DJANGO_SETTINGS_MODULE="accountant.settings.prod"
+$ heroku config:set SECRET_KEY=`openssl rand -base64 32`
+$ heroku config:set LOCAL_SERVER=0
+$ git push heroku master
+$ heroku run python manage.py migrate
+$ heroku run python manage.py createsuperuser
+$ heroku open
+```
+
+Then create your organization, add invoices, add bills, and enjoy !
+
+
+## Local install
+
+First create the virtualenv with the right python version
+
+```sh
+$ mkvirtualenv accountant --python=$(which python3)
+$ workon accountant
+```
+
+Install the dependencies
+
+```sh
+$ pip install -r reqs/dev.txt
+$ npm install
+```
+
+Create the local database
+
+```sh
+$ createdb accountant
+$ ./manage.py migrate
+```
+
+Now run the server :
+
+```sh
+$ ./manage.py runserver
+```
 
 
 ## Features
