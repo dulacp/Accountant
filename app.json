@@ -8,7 +8,8 @@
   ],
   "repository": "https://github.com/dulaccc/Accountant",
   "addons": [
-    "heroku-postgresql:hobby-dev"
+    "heroku-postgresql:hobby-dev",
+    "pgbackups:auto-week"
   ],
   "env": {
     "DJANGO_SETTINGS_MODULE": "accountant.settings.prod",
