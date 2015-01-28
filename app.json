@@ -7,6 +7,18 @@
     "money"
   ],
   "repository": "https://github.com/dulaccc/Accountant",
-  "addons": [],
-  "env": {}
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ],
+  "env": {
+    "DJANGO_SETTINGS_MODULE": "accountant.settings.prod",
+    "SECRET_KEY": {
+      "description": "This gets generated",
+      "generator": "secret"
+    },
+    "LOCAL_SERVER": "0"
+  },
+  "scripts": {
+    "postdeploy": "python manage.py migrate"
+  }
 }
