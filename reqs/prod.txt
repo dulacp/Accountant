@@ -1,7 +1,4 @@
 -r common.txt
 
-## Server
-gunicorn==19.1.1
-
-## Database
-psycopg2==2.5.4
+# Server
+waitress>=0.8,<0.9

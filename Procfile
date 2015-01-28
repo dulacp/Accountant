@@ -1,1 +1,1 @@
-web: gunicorn -c gunicorn.py.ini wsgi:application
+web: waitress-serve --port=$PORT wsgi:application
