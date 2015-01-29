@@ -31,6 +31,12 @@ ALLOWED_HOSTS = (
 )
 
 
+# Emailing
+
+MANDRILL_API_KEY = environ.get('MANDRILL_APIKEY', '')
+EMAIL_BACKEND = "djrill.mail.backends.djrill.DjrillBackend"
+
+
 # Logging
 
 LOGGING = {
