@@ -96,7 +96,7 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'accountant.urls'
 
-WSGI_APPLICATION = 'accountant.wsgi.application'
+WSGI_APPLICATION = 'wsgi.application'
 
 
 # Emailing
