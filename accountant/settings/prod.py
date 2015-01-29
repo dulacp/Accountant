@@ -30,6 +30,9 @@ ALLOWED_HOSTS = (
     '.herokuapp.com',  # Prefer an url with no subdomain authorized
 )
 
+SITE_MAIN_DOMAIN = environ.get('SITE_MAIN_DOMAIN', '')
+SITE_MAIN_NAME = environ.get('SITE_MAIN_NAME', SITE_MAIN_DOMAIN)
+
 
 # Emailing
 

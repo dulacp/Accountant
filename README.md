@@ -19,11 +19,12 @@ It is ready to be deployed on Heroku, but you can deploy on which provider you w
 ## Manual deploy
 
 ```sh
-$ heroku create --region eu accountant
+$ heroku create accountant-x --region eu 
 $ heroku addons:add heroku-postgresql:hobby-dev
 $ heroku config:set DJANGO_SETTINGS_MODULE="accountant.settings.prod"
 $ heroku config:set SECRET_KEY=`openssl rand -base64 32`
 $ heroku config:set LOCAL_SERVER=0
+$ heroku config:set SITE_MAIN_DOMAIN=accountant-x.herokuapp.com
 $ git push heroku master
 $ heroku run python manage.py migrate
 $ heroku run python manage.py createsuperuser

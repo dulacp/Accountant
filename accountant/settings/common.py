@@ -41,6 +41,8 @@ TEMPLATE_DEBUG = True
 ALLOWED_HOSTS = []
 
 SITE_ID = 1
+SITE_MAIN_DOMAIN = 'example.com'
+SITE_MAIN_NAME = 'example.com'
 
 
 # Application definition

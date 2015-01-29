@@ -18,7 +18,8 @@
       "description": "This gets generated",
       "generator": "secret"
     },
-    "LOCAL_SERVER": "0"
+    "LOCAL_SERVER": "0",
+    "SITE_MAIN_DOMAIN": "accountant-x.herokuapp.com"
   },
   "scripts": {
     "postdeploy": "python manage.py migrate"
