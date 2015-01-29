@@ -97,6 +97,11 @@ ROOT_URLCONF = 'accountant.urls'
 WSGI_APPLICATION = 'accountant.wsgi.application'
 
 
+# Emailing
+
+DEFAULT_FROM_EMAIL = 'noreply@accountant.fr'
+
+
 # Templates
 # https://docs.djangoproject.com/en/1.7/ref/settings/#template-context-processors
 from accounting import ACCOUNTING_TEMPLATE_CONTEXT_PROCESSORS
