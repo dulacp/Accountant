@@ -15,9 +15,6 @@ __pycache__/
 static/
 media/
 
-## Components
-components/
-
 ## Testing
 .coverage
 .noseids
