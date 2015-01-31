@@ -20,6 +20,7 @@ It is ready to be deployed on Heroku, but you can deploy on which provider you w
 
 ```sh
 $ heroku create accountant-x --region eu 
+$ heroku config:add BUILDPACK_URL=git://github.com/heroku/heroku-buildpack-python.git
 $ heroku addons:add heroku-postgresql:hobby-dev
 $ heroku config:set DJANGO_SETTINGS_MODULE="accountant.settings.prod"
 $ heroku config:set SECRET_KEY=`openssl rand -base64 32`

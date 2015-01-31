@@ -1,0 +1,30 @@
+{
+  "name": "accountant",
+  "version": "0.1.0",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.8",
+    "gulp-autoprefixer": "^0.0.7",
+    "gulp-cache": "^0.1.1",
+    "gulp-clean": "^0.2.4",
+    "gulp-csso": "^0.2.6",
+    "gulp-filter": "^0.4.1",
+    "gulp-flatten": "^0.0.2",
+    "gulp-jshint": "^1.5.3",
+    "gulp-livereload": "^3.4.0",
+    "gulp-load-plugins": "^0.5.0",
+    "gulp-sass": "^1.0.0",
+    "gulp-size": "^0.3.0",
+    "gulp-uglify": "^0.2.1",
+    "gulp-useref": "^0.4.2",
+    "gulp-rev": "^1.1.0",
+    "gulp-rev-replace": "^0.3.1",
+    "run-sequence": "^1.0.1",
+    "jshint-stylish": "^0.2.0",
+    "opn": "^0.1.1",
+    "minimist": "^1.1.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
