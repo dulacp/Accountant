@@ -42,10 +42,10 @@
                         </ul>
                     </li>
                 </ul>
-
-                {% url 'connect:getting-started' as getting_started_url %}
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="{{ getting_started_url }}">Getting started</a></li></li>
+                    <li>
+                        <a href="{% url 'account_logout' %}">Logout</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -59,7 +59,9 @@
             <div class="col-sm-3 col-md-2 sidebar">
                 <ul class="nav nav-sidebar">
                     {% url 'books:dashboard' as books_dashboard_url %}
+                    {% url 'connect:getting-started' as getting_started_url %}
                     <li class="{% active request books_dashboard_url exact_match=True %}"><a href="{{ books_dashboard_url }}">Overview</a></li>
+                    <li class="{% active request getting_started_url exact_match=True %}"><a href="{{ getting_started_url }}">Getting started</a></li>
                 </ul>
                 <ul class="nav nav-sidebar">
                     {% url 'books:estimate-list' as books_estimate_list_url %}

@@ -9,6 +9,9 @@
 .main-head {
     padding: 10em 0;
 
+    min-height: 20em;
+    height: 100vh;
+
     background: $dark-grey-color;
     background: linear-gradient(to bottom, $dark-grey-color, $grey-color);
     color: white;
