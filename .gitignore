@@ -22,3 +22,7 @@ coverage.xml
 violations.txt
 nosetests.xml
 /htmlcov/*
+
+
+## Npm modules
+/node_modules/
