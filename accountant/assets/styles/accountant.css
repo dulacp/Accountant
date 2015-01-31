@@ -1,0 +1,27 @@
+.body--home {
+  padding-top: 0px; }
+
+.main-head {
+  padding: 10em 0;
+  background: #29303e;
+  background: linear-gradient(to bottom, #29303e, #334955);
+  color: white;
+  text-align: center; }
+
+.navbar-wrapper {
+  background: #334955; }
+  .navbar-wrapper li {
+    border: none; }
+  .navbar-wrapper a {
+    color: white;
+    color: rgba(255, 255, 255, 0.5);
+    text-shadow: none !important; }
+    .navbar-wrapper a:hover {
+      color: white; }
+  .navbar-wrapper .link--bold {
+    background: #293b45; }
+
+.navbar-wrapper--translucide {
+  background: transparent; }
+  .navbar-wrapper--translucide .link--bold {
+    background: transparent; }

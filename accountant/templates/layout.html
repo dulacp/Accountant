@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load nav %}
+
+{% block maincontent %}
+    {% block header %}
+    <nav class="collapse navbar-collapse navbar-wrapper">
+        <div class="container">
+            <a href="/" class="navbar-brand">Accountant-x</a>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="../getting-started/">Getting started</a>
+                </li>
+                <li class="active">
+                    <a href="../css/">CSS</a>
+                </li>
+                <li>
+                    <a href="../components/">Components</a>
+                </li>
+                <li>
+                    <a href="../javascript/">JavaScript</a>
+                </li>
+                <li>
+                    <a href="../customize/">Customize</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a class="link--bold" href="{% url 'account_signup' %}">Sign up</a></li>
+                <li><a href="{% url 'account_login' %}">Sign in</a></li>
+            </ul>
+        </div>
+    </nav>
+    {% endblock %}
+
+    {% block container %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 main">
+                {# bootstrap_messages #}
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+    </div>
+    {% endblock container %}
+{% endblock maincontent %}

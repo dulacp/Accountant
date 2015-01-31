@@ -8,6 +8,7 @@ from stronghold.decorators import public
 
 
 urlpatterns = patterns('',
+    url(r'^', include('apps.pages.urls')),
     url(r'^', include('accounting.urls')),
     url(r'^admin/', include(admin.site.urls)),
 

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load avatar_tags %}
+{% load static %}
+
+{% block bodyclassname %}body--home{% endblock %}
+
+{% block maincontent %}
+
+{% block header %}
+<nav class="collapse navbar-collapse navbar-wrapper navbar-wrapper--translucide navbar-fixed-top">
+    <div class="container">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a class="link--bold" href="{% url 'account_signup' %}">Sign up</a></li>
+            <li><a href="{% url 'account_login' %}">Sign in</a></li>
+        </ul>
+    </div>
+</nav>
+{% endblock %}
+
+<header class="main-head">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="main-title">Accountant-x</h1>
+                <p class="lead">The open-sourced solution that make accounting accessible to small businnesses</p>
+
+                <form class="form-inline" method="post" action="{% url 'account_signup' %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label class="sr-only" for="email">Email address</label>
+                        <input type="email" name="email" class="form-control" id="email" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="password">Password</label>
+                        <input type="password" name="password" class="form-control" id="password" placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn btn-default">Sign up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</header>
+{% endblock maincontent %}
+

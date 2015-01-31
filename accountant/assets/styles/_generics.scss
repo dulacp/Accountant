@@ -1,0 +1,55 @@
+////
+// GENERICS
+
+
+.body--home {
+    padding-top: 0px;
+}
+
+.main-head {
+    padding: 10em 0;
+
+    background: $dark-grey-color;
+    background: linear-gradient(to bottom, $dark-grey-color, $grey-color);
+    color: white;
+    text-align: center;
+}
+
+.main-title {
+
+}
+
+.navbar-wrapper {
+    position: relative;
+    z-index: 2000;
+    background: $grey-color;
+
+    li {
+        border: none;
+    }
+    a {
+        color: white;
+        color: rgba(white, 0.5);
+        text-shadow: none !important;
+
+        &:hover {
+            color: white;
+        }
+    }
+    .link--bold {
+        background: darken($grey-color, 5%);
+    }
+}
+.navbar-wrapper--translucide {
+    background: transparent;
+
+    .link--bold {
+        background: transparent;
+    }
+}
+
+// @media screen and (min-width: 44em) {
+//     .container {
+//         max-width: 1080px;
+//     }
+// }
