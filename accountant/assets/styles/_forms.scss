@@ -1,0 +1,13 @@
+////
+// FORMS
+
+
+.form-control {
+    background-color: white;
+    box-shadow: none;
+    border: none;
+
+    &:focus {
+        box-shadow: none;
+    }
+}

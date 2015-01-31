@@ -60,11 +60,17 @@ DJANGO_APPS = (
 THIRD_PARTY_APPS = (
     'djrill',
     'crispy_forms',
-    'avatar',  # for user avatars
-    'allauth',  # registration
-    'allauth.account',  # registration
-    'allauth.socialaccount',  # registration
     'stronghold',  # enforce login on the whole app
+
+    'avatar',  # for user avatars
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+
+    # social providers
+    # 'allauth.socialaccount.providers.github',
+    # 'allauth.socialaccount.providers.facebook',
+    # 'allauth.socialaccount.providers.twitter',
 )
 
 # Accounting apps
@@ -213,7 +219,7 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
 )
 
-ACCOUNT_AUTHENTICATION_METHOD = 'username'
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 

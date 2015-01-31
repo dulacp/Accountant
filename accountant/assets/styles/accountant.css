@@ -1,3 +1,6 @@
+body {
+  background: #f0f0f0; }
+
 .body--home {
   padding-top: 0px; }
 
@@ -50,3 +53,19 @@
   background: transparent; }
   .navbar-wrapper--translucide .link--bold {
     background: transparent; }
+
+.btn-outlined {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: none; }
+  .btn-outlined:hover {
+    border-color: white;
+    color: white; }
+
+.form-control {
+  background-color: white;
+  box-shadow: none;
+  border: none; }
+  .form-control:focus {
+    box-shadow: none; }

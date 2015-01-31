@@ -1,0 +1,15 @@
+////
+// BUTTONS
+
+
+.btn-outlined {
+    background: transparent;
+    border-color: rgba(white, 0.8);
+    color: rgba(white, 0.8);
+    text-shadow: none;
+
+    &:hover {
+        border-color: white;
+        color: white;
+    }
+}
