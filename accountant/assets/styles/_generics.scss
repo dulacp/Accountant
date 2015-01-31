@@ -19,10 +19,27 @@
 
 }
 
+.navbar-brand {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    margin: auto;
+}
+
+.nav .open > a {
+    &, &:hover, &:focus {
+        background: rgba(white, 0.06);
+        color: white;
+    }
+}
+
 .navbar-wrapper {
     position: relative;
     z-index: 2000;
     background: $grey-color;
+    border-radius: 0px;
 
     li {
         border: none;
@@ -39,6 +56,17 @@
     .link--bold {
         background: darken($grey-color, 5%);
     }
+    .dropdown-menu {
+        .btn-submit {
+            text-align: center;
+            display: inline-block;
+            width: 80%;
+            margin: 0.5em 10%;
+        }
+    }
+}
+.navbar-wrapper--fixed-top {
+    position: absolute;
 }
 .navbar-wrapper--translucide {
     background: transparent;
