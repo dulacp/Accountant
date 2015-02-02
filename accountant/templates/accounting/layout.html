@@ -91,7 +91,7 @@
             </div>
             {% endblock sidebar %}
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-                {# bootstrap_messages #}
+                {% include "_partials/messages.html" %}
                 {% block content %}{% endblock %}
 
                 {% block footer %}
