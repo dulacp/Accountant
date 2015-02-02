@@ -30,6 +30,13 @@ body {
   border-color: transparent;
   text-align: center; }
 
+.main-title {
+  font-size: 6rem;
+  margin-bottom: 20px; }
+
+.signup-form {
+  margin: 3em; }
+
 .navbar-brand {
   position: absolute;
   width: 100%;

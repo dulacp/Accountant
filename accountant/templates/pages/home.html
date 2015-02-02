@@ -27,7 +27,7 @@
                 <h1 class="main-title">Accountant-x</h1>
                 <p class="lead">The open-sourced solution that make accounting accessible to small businnesses</p>
 
-                <form class="form-inline" method="post" action="{% url 'account_signup' %}">
+                <form class="form-inline signup-form" method="post" action="{% url 'account_signup' %}">
                     {% csrf_token %}
                     <div class="form-group">
                         <label class="sr-only" for="email">Email address</label>
