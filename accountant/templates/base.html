@@ -1,4 +1,4 @@
-{% load static %}<!DOCTYPE html>
+{% load static django_select2_tags %}<!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -14,6 +14,7 @@
 
         <link rel="stylesheet" href="{% static 'bootstrap/dist/css/bootstrap.css' %}">
         <link rel="stylesheet" href="{% static 'bootstrap/dist/css/bootstrap-theme.css' %}">
+        {% import_django_select2_css %}
 
         <style>
             @import url(http://fonts.googleapis.com/css?family=Bree+Serif);
@@ -36,6 +37,8 @@
         <![endif]-->
 
         <script src="{% static 'modernizr/modernizr.js' %}"></script>
+        <script src="{% static 'jquery/dist/jquery.js' %}"></script>
+        {% import_django_select2_js %}
     </head>
     <body class="{% block bodyclassname %}{% endblock %}">
         <!--[if lt IE 7]>
@@ -45,7 +48,6 @@
         {% block maincontent %}{% endblock %}
 
         {% block scripts %}
-            <script src="{% static 'jquery/dist/jquery.js' %}"></script>
             <script src="{% static 'bootstrap/dist/js/bootstrap.min.js' %}"></script>
             <script src="{% static 'accounting/js/main.js' %}"></script>
         {% endblock %}

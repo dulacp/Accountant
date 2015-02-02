@@ -206,6 +206,12 @@ BOWER_INSTALLED_APPS = (
 )
 
 
+# Select 2
+
+AUTO_RENDER_SELECT2_STATICS = False
+SELECT2_BOOTSTRAP = True
+
+
 # Custom User
 
 LOGIN_REDIRECT_URL = 'connect:getting-started'

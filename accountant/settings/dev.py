@@ -27,6 +27,10 @@ INSTALLED_APPS += (
     'debug_toolbar.apps.DebugToolbarConfig',
 )
 
+DEBUG_TOOLBAR_CONFIG = {
+    'JQUERY_URL': '',
+}
+
 
 # Emailing
 
