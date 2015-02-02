@@ -21,6 +21,25 @@ body {
     text-align: center;
 }
 
+.main-foot {
+    border-top: 1px solid rgba(black, 0.10);
+    padding-top: 1.5em;
+    padding-bottom: 2em;
+    margin-top: 2em;
+    color: rgba(black, 0.30);
+}
+.main-foot--fixed-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    color: white;
+    color: rgba(white, 0.20);
+    border-color: transparent;
+
+    text-align: center;
+}
+
 .main-title {
 
 }
