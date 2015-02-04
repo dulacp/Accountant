@@ -10,7 +10,8 @@
   "addons": [
     "heroku-postgresql:hobby-dev",
     "pgbackups:auto-week",
-    "mandrill:starter"
+    "mandrill:starter",
+    "newrelic:wayne"
   ],
   "env": {
     "DJANGO_SETTINGS_MODULE": "accountant.settings.prod",
