@@ -24,6 +24,14 @@ DATABASES = {
 }
 
 
+# Apps
+
+INSTALLED_APPS = INSTALLED_APPS + (
+    # Sentry exception capturing
+    'raven.contrib.django.raven_compat',
+)
+
+
 # Security
 
 ALLOWED_HOSTS = (
@@ -50,28 +58,39 @@ LOGGING = {
             "level": "INFO",
             "class": "logging.StreamHandler",
         },
+        "sentry": {
+            "level": "WARNING",
+            "class": "raven.contrib.django.handlers.SentryHandler",
+        },
     },
     "loggers": {
         "django": {
-            "handlers": ["console"],  # "null"
+            "handlers": ["console", "sentry"],  # "null"
             "propagate": True,
             "level": "WARNING",
         },
         "django.request": {
-            "handlers": ["console"],
+            "handlers": ["console", "sentry"],
             "level": "WARNING",  # "ERROR"
             "propagate": False,
         },
         "django.db.backends": {
-            "handlers": ["console"],
+            "handlers": ["console", "sentry"],
             "propagate": False,
             "level": "WARNING",
         },
 
         "apps": {
-            "handlers": ["console"],
+            "handlers": ["console", "sentry"],
             "level": "WARNING",
             "propagate": False,
         },
     }
+}
+
+
+# Sentry
+
+RAVEN_CONFIG = {
+    "dsn": environ.get("RAVEN_DNS", "")
 }
