@@ -88,6 +88,7 @@ MIGRATION_MODULES = {
 }
 
 
+from accounting import ACCOUNTING_MIDDLEWARE_CLASSES
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -98,7 +99,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
     'stronghold.middleware.LoginRequiredMiddleware',
-)
+) + ACCOUNTING_MIDDLEWARE_CLASSES
 
 ROOT_URLCONF = 'accountant.urls'
 
