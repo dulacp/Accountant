@@ -30,12 +30,12 @@
                 <form class="form-inline signup-form" method="post" action="{% url 'account_signup' %}">
                     {% csrf_token %}
                     <div class="form-group">
-                        <label class="sr-only" for="email">Email address</label>
-                        <input type="email" name="email" class="form-control" id="email" placeholder="Enter email">
+                        <label class="sr-only" for="id_email">Email address</label>
+                        <input type="email" name="email" class="form-control" id="id_email" placeholder="Enter email">
                     </div>
                     <div class="form-group">
-                        <label class="sr-only" for="password">Password</label>
-                        <input type="password" name="password" class="form-control" id="password" placeholder="Password">
+                        <label class="sr-only" for="id_password1">Password</label>
+                        <input type="password" name="password1" class="form-control" id="id_password1" placeholder="Password">
                     </div>
                     <button type="submit" class="btn btn-outlined">Sign up</button>
                 </form>
