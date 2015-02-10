@@ -39,6 +39,8 @@
         <script src="{% static 'modernizr/modernizr.js' %}"></script>
         <script src="{% static 'jquery/dist/jquery.js' %}"></script>
         {% import_django_select2_js %}
+
+        {% block head %}{% endblock %}
     </head>
     <body class="{% block bodyclassname %}{% endblock %}">
         <!--[if lt IE 7]>
