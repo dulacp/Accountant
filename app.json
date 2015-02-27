@@ -14,6 +14,7 @@
     "newrelic:wayne"
   ],
   "env": {
+    "BUILDPACK_URL": "https://github.com/heroku/heroku-buildpack-python",
     "DJANGO_SETTINGS_MODULE": "accountant.settings.prod",
     "SECRET_KEY": {
       "description": "This gets generated",
