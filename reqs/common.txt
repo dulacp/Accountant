@@ -18,5 +18,6 @@ django-bower>=5.0,<5.1
 # Forms
 django-crispy-forms>=1.4,<1.5
 
-# django-accounting==0.1
--e git+git://github.com/dulaccc/django-accounting@master#egg=django_accounting
+# Accounting main dependecy
+django-accounting==0.2.0
+#-e git+git://github.com/dulaccc/django-accounting@master#egg=django_accounting
