@@ -10,4 +10,4 @@ djrill>=1.3,<1.4
 newrelic>=2.32,<2.33
 
 # Exceptions
-raven>=4
+raven>=5.2
