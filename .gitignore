@@ -22,7 +22,7 @@ coverage.xml
 violations.txt
 nosetests.xml
 /htmlcov/*
-
+.env
 
 ## Npm modules
 /node_modules/
