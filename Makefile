@@ -38,9 +38,9 @@ migrate_production:
 
 collectstatic_production:
 	./manage.py collectstatic --noinput
-	aws s3 sync --acl public-read renover/static s3://renover-immo/static/
+	aws s3 sync --acl public-read accountant/static s3://accountantx/static/
 
 # shortcuts for deploy to the production
 dp: deploy_production
 dmp: deploy_production migrate_production
-cp: collectstatic_productio
+cp: collectstatic_production
