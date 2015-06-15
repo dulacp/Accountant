@@ -4,6 +4,7 @@ from os.path import dirname, join
 from .common import *
 
 import dj_database_url
+from boto.s3.connection import SubdomainCallingFormat
 
 
 DEBUG = False
@@ -46,6 +47,42 @@ SITE_MAIN_NAME = environ.get('SITE_MAIN_NAME', SITE_MAIN_DOMAIN)
 
 MANDRILL_API_KEY = environ.get('MANDRILL_APIKEY', '')
 EMAIL_BACKEND = "djrill.mail.backends.djrill.DjrillBackend"
+
+
+# Storage
+
+# use Amazon S3 for storage for uploaded media files and static files
+DEFAULT_FILE_STORAGE = 'accountant.s3_storages.MediaRootS3BotoStorage'
+STATICFILES_STORAGE = 'accountant.s3_storages.StaticRootS3BotoStorage'
+
+
+# Amazon S3
+
+# See: http://django-storages.readthedocs.org/en/latest/backends/amazon-S3.html#settings
+AWS_S3_CALLING_FORMAT = SubdomainCallingFormat()
+
+AWS_ACCESS_KEY_ID = environ.get("AWS_S3_ACCESS_KEY_ID", "")
+AWS_SECRET_ACCESS_KEY = environ.get("AWS_S3_SECRET_ACCESS_KEY", "")
+AWS_STORAGE_BUCKET_NAME = environ.get("AWS_STORAGE_BUCKET_NAME", "")
+
+AWS_HOST = environ.get("AWS_S3_HOST", "s3.amazonaws.com")
+AWS_AUTO_CREATE_BUCKET = False
+AWS_S3_FILE_OVERWRITE = False
+AWS_S3_SECURE_URLS = False
+AWS_QUERYSTRING_AUTH = False
+AWS_PRELOAD_METADATA = True
+AWS_REDUCED_REDUNDANCY = False
+
+# AWS cache settings, don't change unless you know what you're doing
+AWS_IS_GZIPPED = True
+AWS_EXPIREY = 60 * 60 * 24 * 7
+AWS_HEADERS = {
+    'Cache-Control': 'public, max-age=%d' % AWS_EXPIREY
+}
+
+# See: https://docs.djangoproject.com/en/dev/ref/settings/#static-url
+STATIC_URL = 'https://%s.s3.amazonaws.com/static/' % AWS_STORAGE_BUCKET_NAME
+MEDIA_URL = 'https://%s.s3.amazonaws.com/media/' % AWS_STORAGE_BUCKET_NAME
 
 
 # Logging
