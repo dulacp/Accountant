@@ -2,7 +2,7 @@
 
 > In the beginning God created man, and the costs followed afterwards.
 
-This project is a concrete integration of the [django-accounting](https://github.com/dulaccc/django-accounting) application.
+This project is a concrete integration of the [django-accounting](https://github.com/dulacp/django-accounting) application.
 It is ready to be deployed on Heroku, but you can deploy on which provider you want.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
@@ -18,7 +18,7 @@ It is ready to be deployed on Heroku, but you can deploy on which provider you w
 
 ## Features
 
-Maybe you want to integrate the accounting engine into your existing project, so check out [the features](https://github.com/dulaccc/django-accounting#features) offered by [django-accounting](https://github.com/dulaccc/django-accounting).
+Maybe you want to integrate the accounting engine into your existing project, so check out [the features](https://github.com/dulacp/django-accounting#features) offered by [django-accounting](https://github.com/dulacp/django-accounting).
 
 
 ## Local install
@@ -190,8 +190,8 @@ $ make cp
 
 ## Contact
 
-[Pierre Dulac](http://github.com/dulaccc)  
-[@dulaccc](https://twitter.com/dulaccc)
+[Pierre Dulac](http://github.com/dulacp)  
+[@\_dulacp](https://twitter.com/_dulacp)
 
 ## License
 Accounting is available under the MIT license. See the LICENSE file for more info.

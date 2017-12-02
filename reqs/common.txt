@@ -20,4 +20,4 @@ django-crispy-forms>=1.4,<1.5
 
 # Accounting main dependecy
 #django-accounting==0.2.3
--e git+git://github.com/dulaccc/django-accounting@master#egg=django_accounting
+git+git://github.com/dulacp/django-accounting@master#egg=django_accounting
